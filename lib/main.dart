@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basic/cupertino_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +12,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HelloPage('Hello World')
+      home: CupertinoPage()
+//        home: HelloPage('Hello World')
     );
   }
 }
@@ -49,6 +51,15 @@ class _HelloPageState extends State<HelloPage> {
               children: <Widget>[
                 Text(_message, style: TextStyle(fontSize: 30)),
                 Text('$_counter', style: TextStyle(fontSize: 30)),   // 다트는 작은 따옴표 기본임
+                RaisedButton(
+                  child: Text('화면 이동'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => CupertinoPage())
+                    );
+                  },
+                )
               ]
         ))
     );
