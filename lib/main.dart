@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CupertinoPage()
-//        home: HelloPage('Hello World')
+//      home: CupertinoPage()
+        home: HelloPage('Hello World')
     );
   }
 }
