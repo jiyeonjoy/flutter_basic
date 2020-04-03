@@ -18,13 +18,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
-
-
 // 상태를 가질 수 있음 stful 엔터치면 생성됨
 class HelloPage extends StatefulWidget {
   final String title;
-
   HelloPage(this.title);
 
   @override
